@@ -50,5 +50,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'login';
+
+$route['(?i)login/logedin'] = 'login/logedin';
+$route['(?i)register/regis'] = 'register/regis';
+$route['(?i)verification/verifikasi'] = 'verification/verifikasi';
+
+$route['(?i)pengajuan/getAllData'] = 'pengajuan/getAllData';
+$route['(?i)pengajuan/getProvinsi'] = 'pengajuan/getProvinsi';
+$route['(?i)pengajuan/getKota'] = 'pengajuan/getKota';
+$route['(?i)pengajuan/getKecamatan'] = 'pengajuan/getKecamatan';
+$route['(?i)pengajuan/getKelurahan'] = 'pengajuan/getKelurahan';
+$route['(?i)pengajuan/insertPengajuan'] = 'pengajuan/insertPengajuan';
+$route['(?i)pengajuan/editPengajuan'] = 'pengajuan/editPengajuan';
+$route['(?i)pengajuan/getDetail'] = 'pengajuan/getDetail';
+$route['(?i)pengajuan/delete'] = 'pengajuan/delete';
+
+$route['(?i)approved/getAllData'] = 'approved/getAllData';
+$route['(?i)approved/editPengajuan'] = 'approved/editPengajuan';
+$route['(?i)approved/getDetail'] = 'approved/getDetail';
+
+$route['(?i)rejected/getAllData'] = 'rejected/getAllData';
+$route['(?i)rejected/editPengajuan'] = 'rejected/editPengajuan';
+$route['(?i)rejected/getDetail'] = 'rejected/getDetail';
+
+$route['(?i)downloaddocument/getAllData'] = 'downloaddocument/getAllData';
+$route['(?i)dashboard/getCharts'] = 'dashboard/getCharts';
+
+$route['(?i)persetujuan/getAllData'] = 'persetujuan/getAllData';
+$route['(?i)persetujuan/downloadDoc/(:any)'] = 'persetujuan/downloadDoc/$1';
+$route['(?i)persetujuan/downloadDocSK/(:any)'] = 'persetujuan/downloadDocSK/$1';
+$route['(?i)persetujuan/approveReject'] = 'persetujuan/approveReject';
+$route['(?i)persetujuan/getDetail'] = 'persetujuan/getDetail';
+
+$route['(?i)uploaddocument/getAllData'] = 'uploaddocument/getAllData';
+$route['(?i)uploaddocument/downloadDoc/(:any)'] = 'uploaddocument/downloadDoc/$1';
+$route['(?i)uploaddocument/insert'] = 'uploaddocument/insert';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
