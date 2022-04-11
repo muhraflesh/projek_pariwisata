@@ -22,54 +22,101 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<style>
+    .container-scroller {
+        overflow: hidden;
+    }
+    .page-body-wrapper {
+        min-height: calc(100vh - 63px);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .page-body-wrapper.full-page-wrapper {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .content-wrapper {
+        flex-grow: 1;
+        width: 100%;
+    }
+    .right-side {
+        min-height: 100vh;
+        background-image: linear-gradient(180deg,#00bdbd 10%,#2452ad 100%);
+    }
+    .left-side {
+        min-height: 100vh;
+        background: url(assets/img/jogja-malioboro.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .form-wrapper {
+        width: 50%;
+        margin-top: 15%;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 4px;
+        box-shadow: 0 -25px 37.7px 11.3px rgba(8, 143, 220, 0.07);
+    }
+    .header-form{
+        text-align: center;
+    }
+    .form-control{
+        height: 46px;
+        background: #e9e9e9;
+        border-color: transparent;
+    }
+    .form-control:focus{
+        box-shadow:unset;
+        border-color: #33c5ff;
+        background: #fff;
+    }
+    #btnLogin{
+        height: 46px;
+    }
+    .footer-form .d-flex{
+        justify-content: space-between;
+    }
+</style>
 
-    <div class="container">
+<body class="bg-white">
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div id="left-side" class="col-lg-5 left-side">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login Resideswita</h1>
-                                    </div>
-                                    <form class="user" action="" method="post">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" name="username" placeholder="Username" id="username">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Password" id="password">
-                                        </div>
-                                        <!-- <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember Me</label>
-                                            </div>
-                                        </div> -->
-                                        <input type="" class="btn btn-primary btn-user btn-block" value="Login" onclick="submitLogin()">
-                                        <hr>
-                                        <a href="#" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="#" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
-                                    </form>
-                                    <hr>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div> -->
-                                    <div class="text-center small">
-                                        Belum Punya Akun ? <a class="" href="<?php echo base_url('register') ?>">Daftar</a>
-                                    </div>
+                    </div>
+                    <div id="right-side" class="col-lg-7 right-side">
+                        <div class="form-wrapper mx-auto shadow-lg">
+                            <div class="header-form mb-3">
+                                <h4 class="text-gray-900">Masuk Resideswita</h4>
+                            </div>
+                            <div class="alert alert-dismissible fade show" style="display: none" role="alert">
+                                <p class="m-0 mytext">Sukses</p>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="user" action="" method="post">
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Nama Pengguna</label>
+                                    <input type="text" class="form-control" name="username" placeholder="" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Kata Sandi</label>
+                                    <input type="password" class="form-control" name="password" placeholder="" id="password">
+                                </div>
+                                <input id="btnLogin" type="button" class="btn btn-primary btn-block mb-2" value="Masuk" onclick="submitLogin()">
+                            </form>
+                            <div class="footer-form">
+                                <div class="d-flex">
+                                    <small>Butuh akun? <a href="register">Daftar</a></small>
+                                    <small><a href="#">Lupa kata sandi</a></small>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +125,9 @@
             </div>
         </div>
     </div>
+    
+
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -90,15 +140,28 @@
     <script src="assets/js/sb-admin-2.min.js"></script>
 
     <script>
+        function notif(c,t){
+            $('.alert .mytext').text(t)
+            $('.alert').addClass(c)
+            $('.alert').show()
+            setTimeout(function() { 
+                $(".alert").hide()
+                $('.alert').removeClass(c)
+                $('.alert.mytext').text('')
+            }, 5000);
+        }
         function submitLogin() {
             var username = $('#username').val()
             var password = $('#password').val()
 
-            if(username == '') {
-                alert("Mohon username diisi")
-            } else if(password == '') {
-                alert("Mohon password diisi")
-            } else {
+            if(username == '' || password == '') {
+                notif('alert-danger', 'Nama pengguna dan kata sandi harus diisi')
+                // alert("Mohon username diisi")
+            } 
+            // else if(password == '') {
+            //     alert("Mohon password diisi")
+            // } 
+            else {
                 var data = {
                     'username'  : username,
                     'password'  : password,
@@ -114,11 +177,14 @@
                         var result = JSON.parse(response)
                         console.log(result)
                         if(result['status_code'] != 200) {
-                            alert(result['message'])
+                            notif('alert-danger', result['message'])
+                            // alert(result['message'])
                         } else {
                             if(result['data']['role_id'] == 'cacff090-75a4-466f-a467-bf69b41333b3') {
+                                notif('alert-success', 'Sukses')
                                 window.location.replace("<?php echo base_url('pengajuan') ?>");   
                             } else {
+                                notif('alert-success', 'Sukses')
                                 window.location.replace("<?php echo base_url('dashboard') ?>");
                             }
                         }

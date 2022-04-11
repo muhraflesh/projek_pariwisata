@@ -25,6 +25,12 @@
     #accordionSidebar.navbar-nav .nav-item.active{
         border-left: 4px solid #f6c23e;
     }
+    @media (min-width: 576px){
+        .modal-dialog-md {
+            max-width: 600px !important;
+            margin: 1.75rem auto;
+        }
+    }
 </style>
 
 <body id="page-top">
@@ -294,7 +300,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profileModal">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -360,6 +366,50 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="<?php echo base_url('login/logout') ?>">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- profile -->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-md" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header" style="background-image: linear-gradient(-45deg,#00bdbd,#2452ad); position: relative; min-height: 80px;">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Anda akan keluar dari Profile?</h5> -->
+                    <div class="photo-profile d-flex" style="width: 80px; height: 80px; background: white; border-radius: 50%; position: absolute; bottom: -50%; border: 1px solid rgb(0,0,0,0.125)">
+                        <p class="m-auto" style="width: fit-content; font-size: 40px; font-weight: 700;">A</p>
+                    </div>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body p-5 mt-2">
+                    <div class="d-flex">
+                        <ul style="list-style: none; padding: 0;" class="mr-4 mb-0">
+                            <li>
+                                <h5 style="font-weight: 600">Username</h5>
+                            </li>
+                            <li>
+                                <h5 style="font-weight: 600">Email</h5>
+                            </li>
+                            <li>
+                                <h5 style="font-weight: 600">User</h5>
+                            </li>
+                        </ul>
+                        <ul style="list-style: none; padding: 0;" class="mb-0">
+                            <li>
+                                <h5>: Asep</h5>
+                            </li>
+                            <li>
+                                <h5>: asep@gmail.com</h5>
+                            </li>
+                            <li>
+                                <h5>: User UJP</h5>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

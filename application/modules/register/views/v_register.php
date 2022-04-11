@@ -27,46 +27,120 @@
         }
     </style>
 </head>
+<style>
+    .container-scroller {
+        overflow: hidden;
+    }
+    .page-body-wrapper {
+        min-height: calc(100vh - 63px);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .page-body-wrapper.full-page-wrapper {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .content-wrapper {
+        flex-grow: 1;
+        width: 100%;
+    }
+    .right-side {
+        min-height: 100vh;
+        background-image: linear-gradient(180deg,#00bdbd 10%,#2452ad 100%);
+    }
+    .left-side {
+        min-height: 100vh;
+        background: url(assets/img/tugu-jogja.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .form-wrapper {
+        width: 55%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 4px;
+        box-shadow: 0 -25px 37.7px 11.3px rgba(8, 143, 220, 0.07);
+    }
+    .header-form{
+        text-align: center;
+    }
+    .form-control{
+        height: 46px;
+        background: #e9e9e9;
+        border-color: transparent;
+    }
+    .form-control:focus{
+        box-shadow:unset;
+        border-color: #33c5ff;
+        background: #fff;
+    }
+    #btnLogin, #btnRegist{
+        height: 46px;
+    }
+    .footer-form .d-flex{
+        justify-content: space-between;
+    }
+</style>
 
-<body class="bg-gradient-primary">
+<body class="bg-white">
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div id="left-side" class="col-lg-5 left-side">
 
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Pendaftaran Akun Resideswita</h1>
+                    </div>
+                    <div id="right-side" class="col-lg-7 right-side">
+                        <div class="form-wrapper mx-auto shadow-lg">
+                            <div class="header-form mb-3">
+                                <h4 class="text-gray-900">Pendaftaran Akun Resideswita</h4>
+                            </div>
+                            <div class="alert alert-dismissible fade show" style="display: none" role="alert">
+                                <p class="m-0 mytext">Sukses</p>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="user" action="" method="post">
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Nama Pengguna</label>
+                                    <input type="text" class="form-control" name="username" placeholder="" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Tipe User</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="userbiasa" name="usertipe" class="custom-control-input">
+                                        <label class="custom-control-label" for="userbiasa">Resideswita</label>
                                     </div>
-                                    <form class="user" action="" method="post">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" name="email" placeholder="Email" id="email">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" name="username" placeholder="Username" id="username">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Password" id="password">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="repassword" placeholder="Re-Password" id="repassword">
-                                        </div>
-                                        <br>
-                                        <input type="" class="btn btn-primary btn-user btn-block" value="Daftar" onclick="submitRegistrasi()">
-                                    </form>
-                                    <hr>
-                                    <div class="text-center small">
-                                        Sudah Punya Akun ? <a class="" href="<?php echo base_url('login') ?>">Masuk</a>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="userujp" name="usertipe" class="custom-control-input">
+                                        <label class="custom-control-label" for="userujp">Usaha Jasa Pariwisata</label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Kata Sandi</label>
+                                    <input type="password" class="form-control" name="password" placeholder="" id="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="text-gray-900">Konfirmasi Kata Sandi</label>
+                                    <input type="password" class="form-control" name="repassword" placeholder="" id="repassword">
+                                </div>
+                                <input id="btnRegist" type="button" class="btn btn-primary btn-block mb-2" value="Daftar" onclick="submitRegistrasi()">
+                            </form>
+                            <div class="footer-form">
+                                <div class="d-flex">
+                                    <small>Sudah punya akun? <a href="login">Masuk</a></small>
                                 </div>
                             </div>
                         </div>
@@ -87,21 +161,34 @@
     <script src="assets/js/sb-admin-2.min.js"></script>
 
     <script>
+        function notif(c,t){
+            $('.alert .mytext').text(t)
+            $('.alert').addClass(c)
+            $('.alert').show()
+            setTimeout(function() { 
+                $(".alert").hide()
+                $('.alert').removeClass(c)
+                $('.alert.mytext').text('')
+            }, 5000);
+        }
         function submitRegistrasi() {
             var email = $('#email').val()
             var username = $('#username').val()
             var password = $('#password').val()
             var repassword = $('#repassword').val()
 
-            if(email == '') {
-                alert("Mohon email diisi")
-            } else if(username == '') {
-                alert("Mohon username diisi")
-            } else if(password == '') {
-                alert("Mohon password diisi")
-            } else if(password != repassword) {
-                alert("Password tidak sama")
-            } else {
+            if(email == '' || username == '' || password == '' || password != repassword ) {
+                notif('alert-danger', 'Mohon lengkapi data anda')
+                // alert("Mohon email diisi")
+            } 
+            // else if(username == '') {
+            //     alert("Mohon username diisi")
+            // } else if(password == '') {
+            //     alert("Mohon password diisi")
+            // } else if(password != repassword) {
+            //     alert("Password tidak sama")
+            // } 
+            else {
                 var data = {
                     'email'     : email,
                     'username'  : username,
@@ -117,8 +204,10 @@
                         var result = JSON.parse(response)
                         console.log(result)
                         if(result['status_code'] != 200) {
-                            alert(result['message'])
+                            notif('alert-danger', result['message'])
+                            // alert(result['message'])
                         } else {
+                            notif('alert-success', 'Pendaftaran sukses')
                             window.location.replace("<?php echo base_url('verification') ?>");
                         }
                     }
