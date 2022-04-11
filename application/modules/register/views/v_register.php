@@ -120,11 +120,11 @@
                                 <div class="form-group">
                                     <label for="" class="text-gray-900">Tipe User</label>
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" id="userbiasa" name="usertipe" class="custom-control-input">
-                                        <label class="custom-control-label" for="userbiasa">Resideswita</label>
+                                        <input type="radio" id="userbiasa" name="usertipe" class="custom-control-input" value="deswita">
+                                        <label class="custom-control-label" for="userbiasa">Deswita</label>
                                     </div>
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" id="userujp" name="usertipe" class="custom-control-input">
+                                        <input type="radio" id="userujp" name="usertipe" class="custom-control-input" value="ujp">
                                         <label class="custom-control-label" for="userujp">Usaha Jasa Pariwisata</label>
                                     </div>
                                 </div>
@@ -175,9 +175,10 @@
             var email = $('#email').val()
             var username = $('#username').val()
             var password = $('#password').val()
+            var type = $('input[name="usertipe"]:checked').val();
             var repassword = $('#repassword').val()
 
-            if(email == '' || username == '' || password == '' || password != repassword ) {
+            if(email == '' || username == '' || password == '' || password != repassword || type == undefined) {
                 notif('alert-danger', 'Mohon lengkapi data anda')
                 // alert("Mohon email diisi")
             } 
@@ -192,9 +193,11 @@
                 var data = {
                     'email'     : email,
                     'username'  : username,
+                    'type'      : type,
                     'password'  : password,
                 }
 
+                // console.log("type", type)
                 $.ajax({
                     url     : "<?php echo base_url(); ?>Register/regis",
                     method  : "POST",

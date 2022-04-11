@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2022 at 01:57 AM
+-- Generation Time: Apr 11, 2022 at 03:43 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -315,16 +315,17 @@ CREATE TABLE `user` (
   `fullname` varchar(255) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `verification_id` varchar(100) NOT NULL,
-  `role_id` varchar(100) NOT NULL
+  `role_id` varchar(100) NOT NULL,
+  `user_type` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `password`, `fullname`, `phone`, `verification_id`, `role_id`) VALUES
-('04eaeb70-2a88-41d5-bff3-0372c6f62777', 'rafli', 'muhammad.shalehudin@solusi247.com', '$2y$12$inxnjpmD0Sz98AqRuKLUw.UUrMKv9qiAwaF0Z0hWEs7E8FoHCCtUW', '', '', '08a9df23-8d8d-40a7-aeb5-204acb8530d5', 'cacff090-75a4-466f-a467-bf69b41333b3'),
-('8fb95e64-d6fa-4f5c-9fb4-fce452c3ecf7', 'raflesh', 'frisse.indonesia@gmail.com', '$2y$12$0ACk8ep3ZtTyVOvLFs7Gdulu5RmZ1fgOgQHbj6Vke3FFmPa1CqhD6', '', '', 'ebb289db-b54a-4522-9ae1-54bacc3b7629', 'f81dbd95-dc98-49ca-8f5c-89fb84b0efb5');
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `fullname`, `phone`, `verification_id`, `role_id`, `user_type`) VALUES
+('04eaeb70-2a88-41d5-bff3-0372c6f62777', 'rafli', 'muhammad.shalehudin@solusi247.com', '$2y$12$inxnjpmD0Sz98AqRuKLUw.UUrMKv9qiAwaF0Z0hWEs7E8FoHCCtUW', '', '', '08a9df23-8d8d-40a7-aeb5-204acb8530d5', 'cacff090-75a4-466f-a467-bf69b41333b3', ''),
+('8fb95e64-d6fa-4f5c-9fb4-fce452c3ecf7', 'raflesh', 'frisse.indonesia@gmail.com', '$2y$12$0ACk8ep3ZtTyVOvLFs7Gdulu5RmZ1fgOgQHbj6Vke3FFmPa1CqhD6', '', '', 'ebb289db-b54a-4522-9ae1-54bacc3b7629', 'f81dbd95-dc98-49ca-8f5c-89fb84b0efb5', '');
 
 -- --------------------------------------------------------
 
@@ -342,7 +343,8 @@ CREATE TABLE `verification` (
 --
 
 INSERT INTO `verification` (`id`, `code`) VALUES
-('9bfa0dcb-7d02-497b-b7b9-b13c14b67241', '832020');
+('9bfa0dcb-7d02-497b-b7b9-b13c14b67241', '832020'),
+('a261dd85-d784-45bc-a69c-39719d3d6415', '224079');
 
 --
 -- Indexes for dumped tables

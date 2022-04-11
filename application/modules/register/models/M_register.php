@@ -6,6 +6,7 @@ class M_register extends CI_Model{
         $password           = $data['password'];
         $email              = $data['email'];
         $username           = $data['username'];
+        $user_type          = $data['type'];
         $options            = ['cost' => 12];
         $user_id            = $this->guidv4();
         $verification_id    = $this->guidv4();
@@ -41,6 +42,7 @@ class M_register extends CI_Model{
             $insertedUser['id'] = $user_id;
             $insertedUser['username'] = $username;
             $insertedUser['email'] = $email;
+            $insertedUser['user_type'] = $user_type;
             $insertedUser['password'] = $hashedpass;
             $insertedUser['verification_id'] = $verification_id;
             $insertedUser['role_id'] = 'cacff090-75a4-466f-a467-bf69b41333b3';
