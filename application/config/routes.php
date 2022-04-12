@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'login';
 
+
 $route['(?i)login/logedin'] = 'login/logedin';
 $route['(?i)register/regis'] = 'register/regis';
 $route['(?i)verification/verifikasi'] = 'verification/verifikasi';
