@@ -365,7 +365,7 @@
                 <div class="modal-body">Klik "Logout" dibawah jika anda ingin keluar dari sistem Resideswita.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?php echo base_url('login/logout') ?>">Logout</a>
+                    <a class="btn btn-primary" href="<?php echo base_url('Login/logout') ?>">Logout</a>
                 </div>
             </div>
         </div>
