@@ -377,6 +377,9 @@
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 
 <script>
+    $('#accordionSidebar.navbar-nav .nav-item .nav-link.active').removeClass('active');
+    $('#pengajuan .nav-link').addClass('active');
+
     $(document).ready(function() {
         $('#tablePengajuan').DataTable({
             "processing": true,
@@ -447,16 +450,25 @@
             {
                 "data": 'null',
                 "orderable": false,
-                "sClass": "text-left",
+                "sClass": "text-center",
                 render: function (data, type, row) {
                     var action = `
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-h"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDetail" onclick="showDetail('${row.id}')">Lihat Detail</a>
+                        <a class="dropdown-item" href="<?php echo base_url('detailPengajuan') ?>" onclick="showDetail('${row.id}')">
+                            <i class="fas fa-eye mr-3 text-muted"></i>Detail
+                        </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDelete" onclick="showDelete('${row.id}')">Hapus Pengajuan</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDetail" onclick="showDetail('${row.id}')">
+                            <i class="fas fa-edit mr-3 text-primary"></i>Ubah Data
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDelete" onclick="showDelete('${row.id}')">
+                            <i class="fas fa-trash mr-3 text-danger"></i>Hapus
+                        </a>
                     </div>
                     `
                

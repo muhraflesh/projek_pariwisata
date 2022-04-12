@@ -15,6 +15,9 @@
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 
 <script>
+    $('#accordionSidebar.navbar-nav .nav-item .nav-link.active').removeClass('active');
+    $('#download_lampiran .nav-link').addClass('active');
+    
     loadData()
 
     function loadData() {

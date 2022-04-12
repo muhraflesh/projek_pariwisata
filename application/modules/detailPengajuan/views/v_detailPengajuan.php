@@ -8,27 +8,141 @@
     }
 </style>
 
-<h1 class="h3 mb-3 text-gray-800">Destinasi Wisata anda yang Terverifikasi</h1>
+<h1 class="h3 mb-3 text-gray-800">Detail Pengajuan</h1>
 
 <div class="card shadow mb-4">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="tableApproved" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Nama</th>
-                        <th>Tanggal Pengajuan</th>
-                        <th>Alamat</th>
-                        <th>Penanggung Jawab</th>
-                        <th>No. Ijin Teknis</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="table-pengajuan">
-                    
-                </tbody>
-            </table>
+    <div class="card-body p-5">
+        <div class="mb-3">
+            <h5 class="text-gray-900">Obyek Wisata</h5>
+            <hr class="sidebar-divider">
+            <div class="d-flex">
+                <ul style="list-style: none; padding: 0;" class="mb-0 col-6">
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Nama Destinasi</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Jenis Usaha</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">No. SK Pendirian</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Nomor Ijin Teknis</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Nomor Pengelolaan Lingkungan</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Provinsi</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Kota / Kabupaten</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Kapanewon</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Kelurahan</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Alamat Lengkap</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">NPWP Daerah</p>
+                    </li>
+                </ul>
+                <ul style="list-style: none; padding: 0;" class="mb-0 col-6">
+                    <li>
+                        <p class="mb-2">: Sendang Anget</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: Pemanian Air Panas</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: 3894579</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: 29834579</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: 2875092383</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: D.I.Yogyakarta</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: Bantul</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: Bantul</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: Palbapang</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: Dusun A, Palbapang, Bantul, Bantul, D.I.Yogyakarta</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: 56982034</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mb-3">
+            <h5 class="text-gray-900">Penanggung Jawab</h5>
+            <hr class="sidebar-divider">
+            <div class="d-flex">
+                <ul style="list-style: none; padding: 0;" class="mb-0 col-6">
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Nama</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Nomor telepon</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Alamat Lengkap</p>
+                    </li>
+                </ul>
+                <ul style="list-style: none; padding: 0;" class="mb-0 col-6">
+                    <li>
+                        <p class="mb-2">: Kelin</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: 08384520930</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: Dusun A, Palbapang, Bantul, Bantul, D.I.Yogyakarta</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mb-3">
+            <h5 class="text-gray-900">Pemohon</h5>
+            <hr class="sidebar-divider">
+            <div class="d-flex">
+                <ul style="list-style: none; padding: 0;" class="mb-0 col-6">
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Nama</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Tanggal</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: 600" class="mb-2">Status</p>
+                    </li>
+                </ul>
+                <ul style="list-style: none; padding: 0;" class="mb-0 col-6">
+                    <li>
+                        <p class="mb-2">: Rafli</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: 2022-04-12 16:18:20</p>
+                    </li>
+                    <li>
+                        <p class="mb-2">: <span class="badge badge-pill badge-warning">Menunggu Persetujuan</span></p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -384,409 +498,6 @@
 
 <script>
     $('#accordionSidebar.navbar-nav .nav-item .nav-link.active').removeClass('active');
-    $('#approved .nav-link').addClass('active');
-
-    $(document).ready(function() {
-        $('#tableApproved').DataTable({
-            "processing": true,
-            "serverSide": false,
-            "responsive": true,
-            "tabIndex": false,
-            "ordering": true,
-            "info":     true,
-            "language": {
-                search: "",
-                searchPlaceholder: "Search"
-            },
-            "ajax": {
-                "dataType": "json",
-                "url": "<?php echo base_url(); ?>Approved/getAllData",
-                "type": "POST",
-                "data": function(data) {
-
-                }
-            },
-            "columns": [
-            {
-                "data": "nama",
-                "searchable": true,
-                "className": "item",
-                "defaultContent": ""
-            },
-            {
-                "data": "tanggal_pendaftaran",
-                "searchable": true,
-                "className": "item",
-                "defaultContent": ""
-            },
-            {
-                "data": "alamat",
-                "searchable": true,
-                "className": "item",
-                "defaultContent": ""
-            },
-            {
-                "data": "penanggung_jawab",
-                "searchable": true,
-                "className": "item",
-                "defaultContent": ""
-            },
-            {
-                "data": "no_izin_teknis",
-                "searchable": true,
-                "className": "item",
-                "defaultContent": ""
-            },
-            {
-                "data": 'null',
-                "orderable": false,
-                "sClass": "text-left",
-                render: function (data, type, row) {
-                    // console.log(row)
-                    var status = ''
-                    if (row.approval_status == 0) {
-                        status = 'Menunggu Persetujuan'
-                    } else if (row.approval_status == 1) {
-                        status = 'Telah Disetujui'
-                    }
-               
-                    return status;
-                }
-            },
-            {
-                "data": 'null',
-                "orderable": false,
-                "sClass": "text-center",
-                render: function (data, type, row) {
-                    var action = `
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-h"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDetail" onclick="showDetail('${row.id}')">
-                            <i class="fas fa-eye mr-3 text-muted"></i>Detail
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDelete" onclick="showDelete('${row.id}')">
-                            <i class="fas fa-trash mr-3 text-danger"></i>Hapus
-                        </a>
-                    </div>
-                    `
-               
-                    return action;
-                }
-            }
-            
-            ],
-            // "fnDrawCallback": function( Settings ) {
-            //     initDatatableAction()
-            // },
-        });
-    });
-
-    getProvinsi()
-
-    function getProvinsi() {
-        $.ajax({
-            url     : "<?php echo base_url(); ?>Pengajuan/getProvinsi",
-            type  : "POST",
-            data    : {},
-			dataType : 'json',
-			async : true,
-            success : function(response){
-                console.log(response)
-                if(response.status_code == 200) {
-                    var element = '<option value=""></option>'
-
-                    for(var x = 0; x < response.data.length; x++) {
-                        var row = response.data[x]
-                        
-                        var items = `
-                            <option value="${row.nama}">${row.nama}</option>
-                        `
-                        element = element + items
-                    }
-                    $('#provinsi').html(element)
-                }
-            }
-        });
-    }
-
-    async function getKota(param) {
-        var provinsi = param == '' ? $('#provinsi').val() : param
-        await $.ajax({
-            url     : "<?php echo base_url(); ?>Pengajuan/getKota",
-            type  : "POST",
-            data    : {provinsi : provinsi},
-			dataType : 'json',
-			async : true,
-            success : function(response){
-                console.log("1")
-                if(response.status_code == 200) {
-                    var element = '<option value=""></option>'
-
-                    for(var x = 0; x < response.data.length; x++) {
-                        var row = response.data[x]
-                        
-                        var items = `
-                            <option value="${row.nama}">${row.nama}</option>
-                        `
-                        element = element + items
-                    }
-                    $('#kota').html(element)
-                }
-            }
-        });
-    }
-
-    async function getKecamatan(param) {
-        var kota = param == '' ? $('#kota').val() : param
-
-        await $.ajax({
-            url     : "<?php echo base_url(); ?>Pengajuan/getKecamatan",
-            type  : "POST",
-            data    : {kota : kota},
-			dataType : 'json',
-			async : true,
-            success : function(response){
-                console.log("2")
-                if(response.status_code == 200) {
-                    var element = '<option value=""></option>'
-
-                    for(var x = 0; x < response.data.length; x++) {
-                        var row = response.data[x]
-                        
-                        var items = `
-                            <option value="${row.nama}">${row.nama}</option>
-                        `
-                        element = element + items
-                    }
-                    $('#kecamatan').html(element)
-                }
-            }
-        });
-    }
-
-    async function getKelurahan(param) {
-        var kecamatan = param == '' ? $('#kecamatan').val() : param
-
-        await $.ajax({
-            url     : "<?php echo base_url(); ?>Pengajuan/getKelurahan",
-            type  : "POST",
-            data    : {kecamatan : kecamatan},
-			dataType : 'json',
-			async : true,
-            success : function(response){
-                console.log("3")
-                if(response.status_code == 200) {
-                    var element = '<option value=""></option>'
-
-                    for(var x = 0; x < response.data.length; x++) {
-                        var row = response.data[x]
-                        
-                        var items = `
-                            <option value="${row.nama}">${row.nama}</option>
-                        `
-                        element = element + items
-                    }
-                    $('#kelurahan').html(element)
-                }
-            }
-        });
-    }
-
-    async function setAlamat(kota, kecamatan, kelurahan) {
-        console.log("4")
-        $('#kota').val(kota)
-        $('#kecamatan').val(kecamatan)
-        $('#kelurahan').val(kelurahan)
-    }
-
-    function showDetail(id) {
-        // console.log(id)
-        $.ajax({
-            url     : "<?php echo base_url(); ?>Approved/getDetail",
-            type  : "POST",
-            data    : {id: id},
-			dataType : 'json',
-			async : true,
-            success : function(response){
-                console.log(response)
-                if(response.status_code == 200) {
-                    var row = response.data[0]
-                    var status = ''
-                    if (row.approval_status == 0) {
-                        status = 'Menunggu Persetujuan'
-                    } else if (row.approval_status == 1) {
-                        status = 'Telah Disetujui'
-                    }
-
-                    $('#detail_nama_destinasi').val(row.nama)
-                    $('#detail_jenis_usaha').val(row.jenis_usaha)
-                    $('#detail_provinsi').val(row.provinsi)
-                    $('#detail_kota').val(row.kota)
-                    $('#detail_kecamatan').val(row.kecamatan)
-                    $('#detail_alamat').val(row.alamat)
-                    $('#detail_npwp_daerah').val(row.npwp_daerah)
-                    $('#detail_sk_pendirian').val(row.no_sk_pendirian)
-                    $('#detail_penanggungjawab').val(row.penanggung_jawab)
-                    $('#detail_alamat_penanggungjawab').val(row.alamat_penanggung_jawab)
-                    $('#detail_kelurahan').val(row.kelurahan)
-                    $('#detail_no_pengelolaan_lingkungan').val(row.no_doc_pengelolaan_lingkungan)
-                    $('#detail_no_ijin_teknis').val(row.no_izin_teknis)
-                    $('#detail_tgl_pengajuan').val(row.tanggal_pendaftaran)
-                    $('#detail_status').val(status)
-                    $('#detail_created_by').val(row.username)
-                    $('#notes').val(row.note)
-                    $('#nomor_sk').val(row.nomor_sk)
-                    $('#telephone_penanggungjawab').val(row.telephone_penanggung_jawab)
-                    $('#total_pelaku').val(row.total_pelaku)
-                    $('#pelaku_pria').val(row.pelaku_pria)
-                    $('#pelaku_wanita').val(row.pelaku_wanita)
-                    $('#status_lahan').val(row.status_lahan)
-                    $('#no_registrasi_kalurahan').val(row.no_registrasi_kalurahan)
-
-                    var doc_susunan_pengurus = row.doc_susunan_pengurus.split("/")[1]
-                    var doc_permohonan_registrasi = row.doc_permohonan_registrasi.split("/")[1]
-                    var doc_deskripsi_destinasi = row.doc_deskripsi_destinasi.split("/")[1]
-
-                    $("#download_susunan_pengurus").prop("href", `<?php echo base_url(); ?>Persetujuan/downloadDoc/${doc_susunan_pengurus}`)
-                    $("#download_permohonan_registrasi").prop("href", `<?php echo base_url(); ?>Persetujuan/downloadDoc/${doc_permohonan_registrasi}`)
-                    $("#download_deskripsi_destinasi").prop("href", `<?php echo base_url(); ?>Persetujuan/downloadDoc/${doc_deskripsi_destinasi}`)
-
-                    if(row.doc_persetujuan) {
-                        $("#form-download-sk").show()
-                        
-                        var doc_sk = row.doc_persetujuan.split("/")[1]
-                        $("#download_sk").prop("href", `<?php echo base_url(); ?>Persetujuan/downloadDocSK/${doc_sk}`)
-                    } else {
-                        $("#form-download-sk").hide()
-                    }
-                }
-            }
-        });
-    }
-
-    function showEdit(id) {
-        var newButton = `
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-            <button class="btn btn-primary" type="button" onclick="saveUpdate('${id}')">Kirim</button>
-        `
-        $('#footer-modal-create').html(newButton)
-
-        $.ajax({
-            url     : "<?php echo base_url(); ?>Pengajuan/getDetail",
-            type  : "POST",
-            data    : {id: id},
-			dataType : 'json',
-			async : true,
-            success : async function(response){
-                console.log(response)
-                if(response.status_code == 200) {
-                    var row = response.data[0]
-                    
-                    $('#nama_destinasi').val(row.nama)
-                    $('#jenis_usaha').val(row.jenis_usaha)
-                    $('#provinsi').val(row.provinsi)
-                    $('#alamat_detail').val(row.alamat)
-                    $('#npwp_daerah').val(row.npwp_daerah)
-                    $('#sk_pendirian').val(row.no_sk_pendirian)
-                    $('#penanggungjawab').val(row.penanggung_jawab)
-                    $('#alamat_penanggungjawab').val(row.alamat_penanggung_jawab)
-                    $('#no_pengelolaan_lingkungan').val(row.no_doc_pengelolaan_lingkungan)
-                    $('#no_ijin_teknis').val(row.no_izin_teknis)
-
-                    await getKota(row.provinsi)
-                    await getKecamatan(row.kota)
-                    await getKelurahan(row.kecamatan)
-                    await setAlamat(row.kota, row.kecamatan, row.kelurahan)
-                }
-            }
-        });
-    }
-
-    function deletePengajuan(id) {
-        $.ajax({
-            url     : "<?php echo base_url(); ?>Pengajuan/delete",
-            type  : "POST",
-            data    : {id: id},
-			dataType : 'json',
-			async : true,
-            success : async function(response){
-                // console.log(response)
-                if(response.status_code == 200) {
-                    $('#modalDelete').hide()
-                    $('.modal-backdrop').remove();
-                    location.reload();
-                } else {
-                    alert(response.message)
-                }
-            }
-        });
-    }
-
-    function showDelete(id) {
-        var newButton = `
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="#" onclick="deletePengajuan('${id}')">Hapus</a>
-        `
-        $('#footer-modal-delete').html(newButton)
-    }
-
-    function saveUpdate(id) {
-        var nama                = $('#nama_destinasi').val()
-        var jenis_usaha         = $('#jenis_usaha').val()
-        var provinsi            = $('#provinsi').val()
-        var kota                = $('#kota').val()
-        var kecamatan           = $('#kecamatan').val()
-        var alamat_detail       = $('#alamat_detail').val()
-        var npwp_daerah         = $('#npwp_daerah').val()
-        var sk_pendirian        = $('#sk_pendirian').val()
-        var penanggungjawab     = $('#penanggungjawab').val()
-        var alamat_penanggungjawab      = $('#alamat_penanggungjawab').val()
-        var kelurahan                   = $('#kelurahan').val()
-        var no_pengelolaan_lingkungan   = $('#no_pengelolaan_lingkungan').val()
-        var no_ijin_teknis              = $('#no_ijin_teknis').val()
-
-        if(nama == '' || jenis_usaha == '' || provinsi == '' || kota == '' || kecamatan == '' || penanggungjawab == '' || alamat_penanggungjawab == '' || kelurahan == '' ) {
-            alert("Formulir anda belum diisi dengan lengkap")
-        } else {
-            var data = {
-                'id'            : id,
-                'nama'          : nama,
-                'jenis_usaha'   : jenis_usaha,
-                'provinsi'      : provinsi,
-                'kota'          : kota,
-                'kecamatan'     : kecamatan,
-                'alamat' : alamat_detail,
-                'npwp_daerah'   : npwp_daerah,
-                'sk_pendirian'  : sk_pendirian,
-                'penanggungjawab'           : penanggungjawab,
-                'alamat_penanggungjawab'    : alamat_penanggungjawab,
-                'kelurahan'                 : kelurahan,
-                'no_pengelolaan_lingkungan' : no_pengelolaan_lingkungan,
-                'no_ijin_teknis'            : no_ijin_teknis,
-            }
-
-            $.ajax({
-                url     : "<?php echo base_url(); ?>Approved/editPengajuan",
-                type  : "POST",
-                data    : data,
-                dataType : 'json',
-                async : true,
-                success : function(response){
-                    // console.log(response)
-                    if(response.status_code == 200) {
-                        $('#modalCreate').hide()
-                        $('.modal-backdrop').remove();
-                        location.reload();
-                    } else {
-                        alert(response.message)
-                    }
-                }
-            });
-        }
-    }
+    $('#pengajuan .nav-link').addClass('active');
 </script>
 

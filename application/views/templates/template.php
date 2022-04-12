@@ -22,14 +22,22 @@
 
 </head>
 <style>
-    #accordionSidebar.navbar-nav .nav-item.active{
-        border-left: 4px solid #f6c23e;
-    }
     @media (min-width: 576px){
         .modal-dialog-md {
             max-width: 600px !important;
             margin: 1.75rem auto;
         }
+    }
+    #accordionSidebar.navbar-nav a.nav-link.active, a.nav-link:hover{
+        background: rgb(255,255,255,20%);
+        border-radius: 10px;
+        color:white !important;
+    }
+    #accordionSidebar.navbar-nav a.nav-link.active i{
+        color:white !important;
+    }
+    td a.dropdown-toggle::after {
+        display: none;
     }
 </style>
 
@@ -39,7 +47,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="border-radius: 0px 50px 0px 0px;">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion px-3" id="accordionSidebar" style="border-radius: 0px 50px 0px 0px;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
@@ -49,7 +57,7 @@
                 <div class="sidebar-brand-text mx-3">Resideswita</div>
             </a>
 
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider">
             <br>
 
             <!-- Nav Item - Dashboard -->
@@ -66,13 +74,13 @@
             <?php endif; ?>
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading mb-3">
                 User Menu
             </div>
 
             <?php if ($this->session->userdata('role_id') === 'cacff090-75a4-466f-a467-bf69b41333b3'): ?>
                 <li id="pengajuan" class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('pengajuan') ?>">
+                    <a class="nav-link active" href="<?php echo base_url('pengajuan') ?>">
                         <i class="fas fa-fw fa-table"></i>
                         <span>Pengajuan Wisata</span>
                     </a>
@@ -102,7 +110,7 @@
                         <span>Persetujuan Wisata</span>
                     </a>
                 </li>
-                <li id="persetujuan" class="nav-item">
+                <li id="uploaddocument" class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('uploaddocument') ?>">
                         <i class="fas fa-fw fa-upload"></i>
                         <span>Upload Dokumen Lampiran</span>
@@ -434,8 +442,8 @@
     <script src="assets/js/demo/datatables-demo.js"></script>
 
     <script>
-        $('#accordionSidebar.navbar-nav nav-item').click(function(){
-            $('#accordionSidebar.navbar-nav nav-item.active').removeClass('active');
+        $('#accordionSidebar.navbar-nav .nav-item .link').click(function(){
+            $('#accordionSidebar.navbar-nav .nav-item .nav-link.active').removeClass('active');
             $(this).addClass('active');
         });
     </script>

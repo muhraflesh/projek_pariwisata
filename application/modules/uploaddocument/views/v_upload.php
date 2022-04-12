@@ -74,6 +74,8 @@
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 
 <script>
+    $('#accordionSidebar.navbar-nav .nav-item .nav-link.active').removeClass('active');
+    $('#uploaddocument .nav-link').addClass('active');
     $(document).ready(function() {
         $('#tableUploaded').DataTable({
             "processing": true,
@@ -110,14 +112,17 @@
             {
                 "data": 'null',
                 "orderable": false,
-                "sClass": "text-left",
+                "sClass": "text-center",
                 render: function (data, type, row) {
                     var action = `
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-h"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="<?php echo base_url(); ?>Uploaddocument/downloadDoc/${row.filename}">Download</a>
+                        <a class="dropdown-item" href="<?php echo base_url(); ?>Uploaddocument/downloadDoc/${row.filename}">
+                            <i class="fas fa-download mr-3 text-muted"></i>Download
+                        </a>
                     </div>
                     `
                
