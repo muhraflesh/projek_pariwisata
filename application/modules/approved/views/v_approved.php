@@ -468,6 +468,13 @@
                             <i class="fas fa-eye mr-3 text-muted"></i>Detail
                         </a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('ReportHarian') ?>">
+                            <i class="fas fa-clipboard mr-3 text-muted"></i>Laporan Harian
+                        </a><div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('ReportBulanan') ?>">
+                            <i class="fas fa-clipboard mr-3 text-muted"></i>Laporan Bulanan
+                        </a>
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDelete" onclick="showDelete('${row.id}')">
                             <i class="fas fa-trash mr-3 text-danger"></i>Hapus
                         </a>

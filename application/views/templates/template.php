@@ -39,6 +39,47 @@
     td a.dropdown-toggle::after {
         display: none;
     }
+    .notification {
+        width: 60%;
+        height: 65px;
+        background: #fff;
+        position: absolute;
+        bottom: 35px;
+        z-index: 99;
+        left: 20%;
+        box-shadow: 2px 2px 10px 0px #7b7878e0;
+        border-radius: 4px;
+        -webkit-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        display: none;
+        opacity: 0;
+    }
+    .notification.show {
+        display: block;
+        opacity: 1;
+    }
+
+    .progress-bar {
+        width: 100%;
+        background-color: #ddd;
+        position: relative;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    #progress-fill {
+        width: 100%;
+        height: 6px;
+        /* background-color: #4CAF50; */
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .notification span i {
+        color: #666;
+        cursor: pointer;
+    }
 </style>
 
 <body id="page-top">
@@ -423,6 +464,19 @@
         </div>
     </div>
 
+    <div class="notification">
+        <div class="progress-bar">
+            <div id="progress-fill" class="bg-success">
+            </div>
+        </div>
+        <span class="float-right mr-2 mt-2">
+            <i class="fas fa-times"></i>
+        </span>
+        <div class="notification-message p-3">
+            Notif sukses
+        </div>
+    </div>
+
     
     <!-- Bootstrap core JavaScript-->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -446,6 +500,32 @@
             $('#accordionSidebar.navbar-nav .nav-item .nav-link.active').removeClass('active');
             $(this).addClass('active');
         });
+
+        function showNotification(notifMsg, classBackground) {
+        $('.notification').addClass('show');
+        $('.notification-message').text(notifMsg);
+        $('#progress-fill').addClass(classBackground);
+        setTimeout(function () {
+            var elem = document.getElementById("progress-fill");
+            var width = 100;
+            var id = setInterval(fillFrame, 25);
+
+            function fillFrame() {
+                if (width < 1) {
+                    clearInterval(id);
+                    setTimeout(function () {
+                        $('.notification').removeClass('show');
+                        $('#progress-fill').removeClass(classBackground);
+                    }, 500);
+
+                }
+                else {
+                    width--;
+                    elem.style.width = width + '%';
+                }
+            }
+        }, 1000);
+    }
     </script>
 
 </body>

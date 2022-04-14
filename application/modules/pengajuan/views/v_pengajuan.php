@@ -232,6 +232,204 @@
     </div>
 </div>
 
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Ubah Data Pengajuan</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Nama Destinasi</label>
+                                <input type="text" class="form-control" name="nama_destinasi" id="nama_destinasi" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Jenis Usaha</label>
+                                <select class="form-control" id="jenis_usaha">
+                                    <option value=""></option>
+                                    <option value="Pengelolaan Pemandian Air Panas Alami">Pengelolaan Pemandian Air Panas Alami</option>
+                                    <option value="Pengelolaan Gua">Pengelolaan Gua</option>
+                                    <option value="Pengelolaan Peninggalan Sejarah & Purbakala">Pengelolaan Peninggalan Sejarah & Purbakala</option>
+                                    <option value="Pengelolaan Museum">Pengelolaan Museum</option>
+                                    <option value="Pengelolaan Permukiman / Lingkungan Adat">Pengelolaan Permukiman / Lingkungan Adat</option>
+                                    <option value="Pengelolaan Objek Ziarah">Pengelolaan Objek Ziarah</option>
+                                    <option value="Pengelolaan Wisata Alam">Pengelolaan Wisata Alam</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="provinsi">Provinsi :</label>
+                                <input type="text" class="form-control" name="provinsi" id="provinsi" placeholder="D.I Yogyakarta" value="D.I Yogyakarta" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kota">Kota / Kabupaten :</label>
+                                <input type="text" class="form-control" name="kota" id="kota" placeholder="Bantul" value="Bantul" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kecamatan">Kapanewon :</label>
+                                <select class="form-control" id="kecamatan" onchange="getKelurahan('')">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kelurahan">Kalurahan :</label>
+                                <select class="form-control" id="kelurahan">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat Detail</label>
+                        <textarea class="form-control" name="alamat_detail" id="alamat_detail" rows="2"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">NPWP Daerah</label>
+                                <input type="text" class="form-control" name="npwp_daerah" id="npwp_daerah" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sel1">No. SK Pendirian</label>
+                                <input type="text" class="form-control" name="sk_pendirian" id="sk_pendirian" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Nama Penanggung Jawab</label>
+                                <input type="text" class="form-control" name="penanggungjawab" id="penanggungjawab" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sel1">Telephone</label>
+                                <input type="text" class="form-control" name="telephone_penanggungjawab" id="telephone_penanggungjawab" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="sel1">Alamat Penanggung Jawab</label>
+                                <input type="text" class="form-control" name="alamat_penanggungjawab" id="alamat_penanggungjawab" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Total Pelaku</label>
+                                <input type="text" class="form-control" name="total_pelaku" id="total_pelaku" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Pelaku Wanita</label>
+                                <input type="text" class="form-control" name="pelaku_wanita" id="pelaku_wanita" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Pelaku Pria</label>
+                                <input type="text" class="form-control" name="pelaku_pria" id="pelaku_pria" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="dokumen_lampiran">Dokumen Susunan Pengurus</label>
+                                <input type="file" class="form-control-file" id="doc_susunan_pengurus" name="filePengurus">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">No. Ijin Teknis</label>
+                                <input type="text" class="form-control" name="no_ijin_teknis" id="no_ijin_teknis" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sel1">No. Dokumen Pengelolaan Lingkungan</label>
+                                <input type="text" class="form-control" name="no_pengelolaan_lingkungan" id="no_pengelolaan_lingkungan" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Status Lahan</label>
+                                <select class="form-control" id="status_lahan">
+                                    <option value=""></option>
+                                    <option value="Hak Milik">Hak Milik</option>
+                                    <option value="Sultan Ground">Sultan Ground</option>
+                                    <option value="Tanah Kas Desa">Tanah Kas Desa</option>
+                                    <option value="Tanah Tutupan">Tanah Tutupan</option>
+                                    <option value="Oro-oro">Oro-oro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Nomor Surat</label>
+                                <input type="text" class="form-control" name="no_registrasi_kalurahan" id="no_registrasi_kalurahan" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="dokumen_lampiran">Surat Permohonan Registrasi</label>
+                                <input type="file" class="form-control-file" id="doc_permohonan_registrasi" name="filePermohonan">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="dokumen_lampiran">Foto & Deskripsi Destinasi</label>
+                                <input type="file" class="form-control-file" id="doc_deskripsi_destinasi" name="fileDeskripsi">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" id="footer-modal-edit">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                <button class="btn btn-primary" type="button" onclick="saveUpdate('${id}')">Ubah</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="modalDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -458,11 +656,11 @@
                         <i class="fas fa-ellipsis-h"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="<?php echo base_url('detailPengajuan') ?>" onclick="showDetail('${row.id}')">
+                        <a class="dropdown-item" href="<?php echo base_url('detailPengajuan') ?>">
                             <i class="fas fa-eye mr-3 text-muted"></i>Detail
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDetail" onclick="showDetail('${row.id}')">
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEdit" onclick="">
                             <i class="fas fa-edit mr-3 text-primary"></i>Ubah Data
                         </a>
                         <div class="dropdown-divider"></div>
@@ -744,8 +942,8 @@
 
     function showDelete(id) {
         var newButton = `
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="#" onclick="deletePengajuan('${id}')">Hapus</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <a class="btn btn-danger" href="#" onclick="deletePengajuan('${id}')">Hapus</a>
         `
         $('#footer-modal-delete').html(newButton)
     }

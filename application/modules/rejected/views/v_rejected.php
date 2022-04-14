@@ -634,8 +634,8 @@
 
     function showDelete(id) {
         var newButton = `
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="#" onclick="deletePengajuan('${id}')">Hapus</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <a class="btn btn-danger" href="#" onclick="deletePengajuan('${id}')">Hapus</a>
         `
         $('#footer-modal-delete').html(newButton)
     }
